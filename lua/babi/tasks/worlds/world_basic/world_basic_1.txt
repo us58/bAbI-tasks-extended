@@ -1,0 +1,170 @@
+# locations
+
+create bedroom
+set bedroom is_thing
+set bedroom is_location
+
+create kitchen
+set kitchen is_thing
+set kitchen is_location
+
+create garden
+set garden is_thing
+set garden is_location
+
+create hallway
+set hallway is_thing
+set hallway is_location
+
+create bathroom
+set bathroom is_thing
+set bathroom is_location
+
+create office
+set office is_thing
+set office is_location
+
+create living_room
+set living_room is_thing
+set living_room is_location
+
+create garage
+set garage is_thing
+set garage is_location
+
+# small (moveable) objects
+
+create apple
+set apple is_thing
+set apple is_gettable
+set apple is_in kitchen
+
+create milk
+set milk is_thing
+set milk is_gettable
+set milk is_in kitchen
+
+create football
+set football is_thing
+set football is_gettable
+set football is_in garden
+
+create watering_can
+set watering_can is_thing
+set watering_can is_gettable
+set watering_can is_in garden
+
+create pillow
+set pillow is_thing
+set pillow is_gettable
+set pillow is_in bedroom
+
+create alarm_clock
+set alarm_clock is_thing
+set alarm_clock is_gettable
+set alarm_clock is_in bedroom
+
+create umbrella
+set umbrella is_thing
+set umbrella is_gettable
+set umbrella is_in hallway
+
+create keyring
+set keyring is_thing
+set keyring is_gettable
+set keyring is_in hallway
+
+create towel
+set towel is_thing
+set towel is_gettable
+set towel is_in bathroom
+
+create toilet_paper
+set toilet_paper is_thing
+set toilet_paper is_gettable
+set toilet_paper is_in bathroom
+
+create pen
+set pen is_thing
+set pen is_gettable
+set pen is_in office
+
+create notebook
+set notebook is_thing
+set notebook is_gettable
+set notebook is_in office
+
+create remote
+set remote is_thing
+set remote is_gettable
+set remote is_in living_room
+
+create book
+set book is_thing
+set book is_gettable
+set book is_in living_room
+
+create screwdriver
+set screwdriver is_thing
+set screwdriver is_gettable
+set screwdriver is_in garage
+
+create zip_ties
+set zip_ties is_thing
+set zip_ties is_gettable
+set zip_ties is_in garage
+
+# objects
+
+create table
+set table is_thing
+set table is_in kitchen
+
+# actors
+create John
+set John is_actor
+set John is_in kitchen
+set John is_god
+set John is_male
+
+create Mary
+set Mary is_actor
+set Mary is_in bedroom
+set Mary is_god
+set Mary is_female
+
+create Sandra
+set Sandra is_actor
+set Sandra is_in garden
+set Sandra is_god
+set Sandra is_female
+
+create Daniel
+set Daniel is_actor
+set Daniel is_in hallway
+set Daniel is_god
+set Daniel is_male
+
+create Finn
+set Finn is_actor
+set Finn is_in living_room
+set Finn is_god
+set Finn is_male
+
+create Thomas
+set Thomas is_actor
+set Thomas is_in garage
+set Thomas is_god
+set Thomas is_male
+
+create Hannah
+set Hannah is_actor
+set Hannah is_in office
+set Hannah is_god
+set Hannah is_female
+
+create David
+set David is_actor
+set David is_in bathroom
+set David is_god
+set David is_male

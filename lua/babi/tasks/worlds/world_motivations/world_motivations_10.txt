@@ -1,0 +1,82 @@
+# locations
+
+create game_room
+set game_room is_thing
+set game_room is_location
+
+create home_office
+set home_office is_thing
+set home_office is_location
+
+create utility_room
+set utility_room is_thing
+set utility_room is_location
+
+# small (moveable) objects
+
+create toy_car
+set toy_car is_thing
+set toy_car is_gettable
+set toy_car is_in game_room
+
+create planner
+set planner is_thing
+set planner is_gettable
+set planner is_in home_office
+
+create card
+set card is_thing
+set card is_gettable
+set card is_in home_office
+
+create broom
+set broom is_thing
+set broom is_gettable
+set broom is_in utility_room
+
+# actors
+create Dylan
+set Dylan is_actor
+set Dylan is_god
+set Dylan is_male
+
+create Madison
+set Madison is_actor
+set Madison is_god
+set Madison is_female
+
+create Christopher
+set Christopher is_actor
+set Christopher is_god
+set Christopher is_male
+
+create Abigail
+set Abigail is_actor
+set Abigail is_god
+set Abigail is_female
+
+# motivations
+
+create playful
+set playful is_motivation
+set playful destination game_room
+set playful object toy_car
+set playful is_adjective
+
+create determined
+set determined is_motivation
+set determined destination home_office
+set determined object planner
+set determined is_adjective
+
+create grateful
+set grateful is_motivation
+set grateful destination home_office
+set grateful object card
+set grateful is_adjective
+
+create tidy
+set tidy is_motivation
+set tidy destination utility_room
+set tidy object broom
+set tidy is_adjective

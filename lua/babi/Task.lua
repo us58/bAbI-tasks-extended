@@ -13,8 +13,8 @@ local stringify = require 'babi.stringify'
 local Task = torch.class('babi.Task', babi)
 
 --- Generate a story and questions, and print to screen.
-function Task:generate(config)
-    local world = self:new_world(config)
+function Task:generate(config, world_lines)
+    local world = self:new_world(world_lines)
     local story, knowledge = self:generate_story(world, babi.Knowledge(world),
                                                  List(), config)
     return stringify(story, knowledge, config)

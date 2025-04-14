@@ -14,9 +14,9 @@ local actions = require 'babi.actions'
 
 local Counting = torch.class('babi.Counting', 'babi.Task', babi)
 
-function Counting:new_world()
+function Counting:new_world(world_strings)
     local world = babi.World()
-    world:load((BABI_HOME or '') .. 'tasks/worlds/world_basic.txt')
+    world:load_from_strings(world_strings)
     return world
 end
 

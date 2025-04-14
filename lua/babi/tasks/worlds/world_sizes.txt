@@ -1,4 +1,8 @@
-# containers
+######################################
+######################################
+# containers without size
+######################################
+######################################
 
 create suitcase
 set suitcase is_thing
@@ -16,6 +20,173 @@ create "treasure chest"
 set "treasure chest" is_thing
 set "treasure chest" is_container
 
+create bag
+set bag is_thing
+set bag is_container
+
+create sack
+set sack is_thing
+set sack is_container
+
+create bin
+set bin is_thing
+set bin is_container
+
+create receptacle
+set receptacle is_thing
+set receptacle is_container
+
+create holder
+set holder is_thing
+set holder is_container
+
+create vessel
+set vessel is_thing
+set vessel is_container
+
+create pouch
+set pouch is_thing
+set pouch is_container
+
+create case
+set case is_thing
+set case is_container
+
+create pack
+set pack is_thing
+set pack is_container
+
+create chest
+set chest is_thing
+set chest is_container
+
+create canister
+set canister is_thing
+set canister is_container
+
+create tub
+set tub is_thing
+set tub is_container
+
+create package
+set package is_thing
+set package is_container
+
+create parcel
+set parcel is_thing
+set parcel is_container
+
+create enclosure
+set enclosure is_thing
+set enclosure is_container
+
+create carton
+set carton is_thing
+set carton is_container
+
+create cylinder
+set cylinder is_thing
+set cylinder is_container
+
+create capsule
+set capsule is_thing
+set capsule is_container
+
+create wrapping
+set wrapping is_thing
+set wrapping is_container
+
+create carrier
+set carrier is_thing
+set carrier is_container
+
+create silo
+set silo is_thing
+set silo is_container
+
+create barrel
+set barrel is_thing
+set barrel is_container
+
+create cask
+set cask is_thing
+set cask is_container
+
+create compartment
+set compartment is_thing
+set compartment is_container
+
+create "amazon box"
+set "amazon box" is_thing
+set "amazon box" is_container
+
+create "memory chest"
+set "memory chest" is_thing
+set "memory chest" is_container
+
+create "decorative box"
+set "decorative box" is_thing
+set "decorative box" is_container
+
+create "gardening bag"
+set "gardening bag" is_thing
+set "gardening bag" is_container
+
+create "toy box"
+set "toy box" is_thing
+set "toy box" is_container
+
+create "instrument bag"
+set "instrument bag" is_thing
+set "instrument bag" is_container
+
+create "waterproof bag"
+set "waterproof bag" is_thing
+set "waterproof bag" is_container
+
+create "grain sack"
+set "grain sack" is_thing
+set "grain sack" is_container
+
+create "gear bag"
+set "gear bag" is_thing
+set "gear bag" is_container
+
+create "laundry bag"
+set "laundry bag" is_thing
+set "laundry bag" is_container
+
+create "cargo box"
+set "cargo box" is_thing
+set "cargo box" is_container
+
+create "travel case"
+set "travel case" is_thing
+set "travel case" is_container
+
+create "tool chest"
+set "tool chest" is_thing
+set "tool chest" is_container
+
+create trunk
+set trunk is_thing
+set trunk is_container
+
+create "storage box"
+set "storage box" is_thing
+set "storage box" is_container
+
+create "shopping bag"
+set "shopping bag" is_thing
+set "shopping bag" is_container
+
+######################################
+######################################
+# containers with size
+######################################
+######################################
+
+
 create "box of chocolates"
 set "box of chocolates" is_thing
 set "box of chocolates" is_container
@@ -24,3 +195,84 @@ set "box of chocolates" size 1
 create chocolate
 set chocolate is_thing
 set chocolate size 0.5
+
+create "bag of marbles"
+set "bag of marbles" is_thing
+set "bag of marbles" is_container
+set "bag of marbles" size 1
+
+create marble
+set marble is_thing
+set marble size 0.5
+
+create "crate of apples"
+set "crate of apples" is_thing
+set "crate of apples" is_container
+set "crate of apples" size 1
+
+create apple
+set apple is_thing
+set apple size 0.5
+
+create "basket of eggs"
+set "basket of eggs" is_thing
+set "basket of eggs" is_container
+set "basket of eggs" size 1
+
+create egg
+set egg is_thing
+set egg size 0.5
+
+create "basket of oranges"
+set "basket of oranges" is_thing
+set "basket of oranges" is_container
+set "basket of oranges" size 1
+
+create orange
+set orange is_thing
+set orange size 0.5
+
+create "box of toys"
+set "box of toys" is_thing
+set "box of toys" is_container
+set "box of toys" size 1
+
+create toy
+set toy is_thing
+set toy size 0.5
+
+create "jar of cookies"
+set "jar of cookies" is_thing
+set "jar of cookies" is_container
+set "jar of cookies" size 1
+
+create cookie
+set cookie is_thing
+set cookie size 0.5
+
+create "case of tools"
+set "case of tools" is_thing
+set "case of tools" is_container
+set "case of tools" size 1
+
+create tool
+set tool is_thing
+set tool size 0.5
+
+create "box of puzzles"
+set "box of puzzles" is_thing
+set "box of puzzles" is_container
+set "box of puzzles" size 1
+
+create puzzle
+set puzzle is_thing
+set puzzle size 0.5
+
+create "box of shoes"
+set "box of shoes" is_thing
+set "box of shoes" is_container
+set "box of shoes" size 1
+
+create shoe
+set shoe is_thing
+set shoe size 0.5

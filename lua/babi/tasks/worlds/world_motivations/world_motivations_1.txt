@@ -1,0 +1,82 @@
+# locations
+
+create attic
+set attic is_thing
+set attic is_location
+
+create basement
+set basement is_thing
+set basement is_location
+
+create garage
+set garage is_thing
+set garage is_location
+
+# small (moveable) objects
+
+create book
+set book is_thing
+set book is_gettable
+set book is_in attic
+
+create hammer
+set hammer is_thing
+set hammer is_gettable
+set hammer is_in garage
+
+create juice
+set juice is_thing
+set juice is_gettable
+set juice is_in basement
+
+create blanket
+set blanket is_thing
+set blanket is_gettable
+set blanket is_in attic
+
+# actors
+create Alice
+set Alice is_actor
+set Alice is_god
+set Alice is_female
+
+create Bob
+set Bob is_actor
+set Bob is_god
+set Bob is_male
+
+create Charlie
+set Charlie is_actor
+set Charlie is_god
+set Charlie is_male
+
+create Diana
+set Diana is_actor
+set Diana is_god
+set Diana is_female
+
+# motivations
+
+create studious
+set studious is_motivation
+set studious destination attic
+set studious object book
+set studious is_adjective
+
+create handy
+set handy is_motivation
+set handy destination garage
+set handy object hammer
+set handy is_adjective
+
+create dehydrated
+set dehydrated is_motivation
+set dehydrated destination basement
+set dehydrated object juice
+set dehydrated is_adjective
+
+create sleepy
+set sleepy is_motivation
+set sleepy destination attic
+set sleepy object blanket
+set sleepy is_adjective

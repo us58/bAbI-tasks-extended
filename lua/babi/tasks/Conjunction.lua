@@ -13,9 +13,9 @@ local utilities = require 'babi.utilities'
 
 local Conjunction = torch.class('babi.Conjunction', 'babi.Task', babi)
 
-function Conjunction:new_world()
+function Conjunction:new_world(world_strings)
     local world = babi.World()
-    world:load((BABI_HOME or '') .. 'tasks/worlds/world_basic.txt')
+    world:load_from_strings(world_strings)
     return world
 end
 

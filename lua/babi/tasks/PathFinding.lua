@@ -16,11 +16,53 @@ local DIRECTIONS = {'n', 's', 'e', 'w'}
 
 local PathFinding = torch.class('babi.PathFinding', 'babi.Task', babi)
 
+local options = {'bedroom', 'bathroom', 'kitchen',
+                 'office', 'garden', 'hallway',
+                 'living_room', 'dining_room',
+                 'balcony', 'garage', 'attic',
+                 'basement', 'porch', 'laundry_room',
+                 'pantry', 'terrace', 'foyer',
+                 'shed', 'playroom', 'study',
+                 'conservatory', 'library',
+                 'sunroom', 'workshop', 'gym',
+                 'home_theater', 'wine_cellar',
+                 'cloakroom', 'nursery', 'studio',
+                 'patio', 'loft', 'storage_room',
+                 'mudroom', 'sauna', 'pergola',
+                 'guest_room', 'den', 'music_room',
+                 'utility_room', 'courtyard',
+                 'lounge', 'greenhouse', 'driveway',
+                 'deck', 'veranda', 'reading_nook',
+                 'game_room', 'landing', 'scullery',
+                 'boiler_room', 'box_room',
+                 'mini_bar', 'corridor', 'orchard',
+                 'gallery', 'caretaker_quarters',
+                 'changing_room', 'spa', 'man_cave',
+                 'safe_room', 'crypt', 'secret_room',
+                 'watchtower', 'tasting_room',
+                 'pressing_room', 'pool_area',
+                 'pool_house', 'bunker',
+                 'media_room', 'meditation_room',
+                 'panic_room', 'kennel',
+                 'aviary', 'stable',
+                 'well', 'vantage_point',
+                 'armory', 'drawing_room',
+                 'solarium', 'observatory',
+                 'smoking_room', 'root_cellar',
+                 'carport', 'breakfast_nook',
+                 'powder_room', 'vestibule',
+                 'turret', 'chapel',
+                 'grotto', 'orangery',
+                 'gatehouse', 'servants_quarters',
+                 'potting_shed', 'gazebo',
+                 'pump_house', 'dovecote',
+                 'hidden_passage', 'catwalk',
+                 'ice_house'}
+
 function PathFinding:new_world()
     local world = babi.World()
     local locations = List()
-    for i, option in ipairs{'bedroom', 'bathroom', 'kitchen',
-                            'office', 'garden', 'hallway'} do
+    for i, option in ipairs(options) do
         local location = world:create_entity(option, {is_location = true})
         locations:append(location)
     end

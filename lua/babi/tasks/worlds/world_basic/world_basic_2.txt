@@ -1,0 +1,170 @@
+# locations
+
+create bedroom
+set bedroom is_thing
+set bedroom is_location
+
+create kitchen
+set kitchen is_thing
+set kitchen is_location
+
+create garden
+set garden is_thing
+set garden is_location
+
+create hallway
+set hallway is_thing
+set hallway is_location
+
+create bathroom
+set bathroom is_thing
+set bathroom is_location
+
+create office
+set office is_thing
+set office is_location
+
+create living_room
+set living_room is_thing
+set living_room is_location
+
+create garage
+set garage is_thing
+set garage is_location
+
+# small (moveable) objects
+
+create plate
+set plate is_thing
+set plate is_gettable
+set plate is_in kitchen
+
+create fork
+set fork is_thing
+set fork is_gettable
+set fork is_in kitchen
+
+create shovel
+set shovel is_thing
+set shovel is_gettable
+set shovel is_in garden
+
+create gloves
+set gloves is_thing
+set gloves is_gettable
+set gloves is_in garden
+
+create lamp
+set lamp is_thing
+set lamp is_gettable
+set lamp is_in bedroom
+
+create slippers
+set slippers is_thing
+set slippers is_gettable
+set slippers is_in bedroom
+
+create shoes
+set shoes is_thing
+set shoes is_gettable
+set shoes is_in hallway
+
+create coat
+set coat is_thing
+set coat is_gettable
+set coat is_in hallway
+
+create soap
+set soap is_thing
+set soap is_gettable
+set soap is_in bathroom
+
+create toothbrush
+set toothbrush is_thing
+set toothbrush is_gettable
+set toothbrush is_in bathroom
+
+create stapler
+set stapler is_thing
+set stapler is_gettable
+set stapler is_in office
+
+create mug
+set mug is_thing
+set mug is_gettable
+set mug is_in office
+
+create vase
+set vase is_thing
+set vase is_gettable
+set vase is_in living_room
+
+create magazine
+set magazine is_thing
+set magazine is_gettable
+set magazine is_in living_room
+
+create hammer
+set hammer is_thing
+set hammer is_gettable
+set hammer is_in garage
+
+create wrench
+set wrench is_thing
+set wrench is_gettable
+set wrench is_in garage
+
+# objects
+
+create table
+set table is_thing
+set table is_in kitchen
+
+# actors
+create Alice
+set Alice is_actor
+set Alice is_in kitchen
+set Alice is_god
+set Alice is_female
+
+create Bob
+set Bob is_actor
+set Bob is_in bedroom
+set Bob is_god
+set Bob is_male
+
+create Charlie
+set Charlie is_actor
+set Charlie is_in garden
+set Charlie is_god
+set Charlie is_male
+
+create Diana
+set Diana is_actor
+set Diana is_in hallway
+set Diana is_god
+set Diana is_female
+
+create Ethan
+set Ethan is_actor
+set Ethan is_in bathroom
+set Ethan is_god
+set Ethan is_male
+
+create Fiona
+set Fiona is_actor
+set Fiona is_in office
+set Fiona is_god
+set Fiona is_female
+
+create George
+set George is_actor
+set George is_in living_room
+set George is_god
+set George is_male
+
+create Helen
+set Helen is_actor
+set Helen is_in garage
+set Helen is_god
+set Helen is_female

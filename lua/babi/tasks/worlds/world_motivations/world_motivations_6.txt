@@ -1,0 +1,82 @@
+# locations
+
+create nursery
+set nursery is_thing
+set nursery is_location
+
+create gym
+set gym is_thing
+set gym is_location
+
+create library
+set library is_thing
+set library is_location
+
+# small (moveable) objects
+
+create diaper
+set diaper is_thing
+set diaper is_gettable
+set diaper is_in nursery
+
+create dumbbell
+set dumbbell is_thing
+set dumbbell is_gettable
+set dumbbell is_in gym
+
+create bookmark
+set bookmark is_thing
+set bookmark is_gettable
+set bookmark is_in library
+
+create toy
+set toy is_thing
+set toy is_gettable
+set toy is_in nursery
+
+# actors
+create Benjamin
+set Benjamin is_actor
+set Benjamin is_god
+set Benjamin is_male
+
+create Mia
+set Mia is_actor
+set Mia is_god
+set Mia is_female
+
+create Lucas
+set Lucas is_actor
+set Lucas is_god
+set Lucas is_male
+
+create Charlotte
+set Charlotte is_actor
+set Charlotte is_god
+set Charlotte is_female
+
+# motivations
+
+create smelly
+set smelly is_motivation
+set smelly destination nursery
+set smelly object diaper
+set smelly is_adjective
+
+create weak
+set weak is_motivation
+set weak destination gym
+set weak object dumbbell
+set weak is_adjective
+
+create lost
+set lost is_motivation
+set lost destination library
+set lost object bookmark
+set lost is_adjective
+
+create fussy
+set fussy is_motivation
+set fussy destination nursery
+set fussy object toy
+set fussy is_adjective

@@ -38,6 +38,29 @@ function World:load(fname)
     end
 end
 
+-- Load world from table
+function World:load_from_strings(world_strings)
+    for _, line in ipairs(world_strings) do
+        self:perform_command('god ' .. line)
+    end
+end
+
+-- Load world to table
+function World:load_lines(fname)
+    local f = assert(io.open(fname))
+    local lines = {}
+
+    while true do
+        local line = f:read('*l')
+        if not line then break end
+        if line ~= '' and line:sub(1, 1) ~= '#' then
+            table.insert(lines, line)
+        end
+    end
+    f:close()
+    return lines
+end
+
 -- Perform a textual command of the form 'john eat apple'
 function World:perform_command(command)
     local function parse(actor, action, ...)

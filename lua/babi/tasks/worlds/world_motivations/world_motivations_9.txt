@@ -1,0 +1,82 @@
+# locations
+
+create sauna
+set sauna is_thing
+set sauna is_location
+
+create observatory
+set observatory is_thing
+set observatory is_location
+
+create meditation_room
+set meditation_room is_thing
+set meditation_room is_location
+
+# small (moveable) objects
+
+create robe
+set robe is_thing
+set robe is_gettable
+set robe is_in sauna
+
+create photo_album
+set photo_album is_thing
+set photo_album is_gettable
+set photo_album is_in observatory
+
+create journal
+set journal is_thing
+set journal is_gettable
+set journal is_in meditation_room
+
+create incense
+set incense is_thing
+set incense is_gettable
+set incense is_in meditation_room
+
+# actors
+create Joseph
+set Joseph is_actor
+set Joseph is_god
+set Joseph is_male
+
+create Victoria
+set Victoria is_actor
+set Victoria is_god
+set Victoria is_female
+
+create Andrew
+set Andrew is_actor
+set Andrew is_god
+set Andrew is_male
+
+create Scarlett
+set Scarlett is_actor
+set Scarlett is_god
+set Scarlett is_female
+
+# motivations
+
+create sweaty
+set sweaty is_motivation
+set sweaty destination sauna
+set sweaty object robe
+set sweaty is_adjective
+
+create lonely
+set lonely is_motivation
+set lonely destination observatory
+set lonely object photo_album
+set lonely is_adjective
+
+create hopeful
+set hopeful is_motivation
+set hopeful destination meditation_room
+set hopeful object journal
+set hopeful is_adjective
+
+create calm
+set calm is_motivation
+set calm destination meditation_room
+set calm object incense
+set calm is_adjective

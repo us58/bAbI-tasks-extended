@@ -1,0 +1,82 @@
+# locations
+
+create living_room
+set living_room is_thing
+set living_room is_location
+
+create bathroom
+set bathroom is_thing
+set bathroom is_location
+
+create patio
+set patio is_thing
+set patio is_location
+
+# small (moveable) objects
+
+create remote_control
+set remote_control is_thing
+set remote_control is_gettable
+set remote_control is_in living_room
+
+create towel
+set towel is_thing
+set towel is_gettable
+set towel is_in bathroom
+
+create plant_pot
+set plant_pot is_thing
+set plant_pot is_gettable
+set plant_pot is_in patio
+
+create newspaper
+set newspaper is_thing
+set newspaper is_gettable
+set newspaper is_in living_room
+
+# actors
+create Maria
+set Maria is_actor
+set Maria is_god
+set Maria is_female
+
+create David
+set David is_actor
+set David is_god
+set David is_male
+
+create Chloe
+set Chloe is_actor
+set Chloe is_god
+set Chloe is_female
+
+create Ethan
+set Ethan is_actor
+set Ethan is_god
+set Ethan is_male
+
+# motivations
+
+create uncomfortable
+set uncomfortable is_motivation
+set uncomfortable destination living_room
+set uncomfortable object remote_control
+set uncomfortable is_adjective
+
+create unclean
+set unclean is_motivation
+set unclean destination bathroom
+set unclean object towel
+set unclean is_adjective
+
+create stressed
+set stressed is_motivation
+set stressed destination patio
+set stressed object plant_pot
+set stressed is_adjective
+
+create curious
+set curious is_motivation
+set curious destination living_room
+set curious object newspaper
+set curious is_adjective

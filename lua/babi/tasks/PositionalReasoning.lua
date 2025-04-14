@@ -16,13 +16,102 @@ local PositionalReasoning =
     torch.class('babi.PositionalReasoning', 'babi.Task', babi)
 local DIRECTIONS = {{'w', 'e'}, {'n', 's'}}
 
+local colors = {
+    'gray',
+    'white',
+    'yellow',
+    'green',
+    'red',
+    'blue',
+    'purple',
+    'pink',
+    'brown',
+    'black',
+    'beige',
+    'cyan',
+    'magenta',
+    'teal',
+    'maroon',
+    'aqua',
+    'fuchsia',
+    'violet',
+    'indigo',
+    'chartreuse',
+    'khaki',
+    'crimson',
+    'sienna',
+    'tan',
+    'gainsboro',
+    'azure'
+}
+
+local shapes = {
+    'square',
+    'rectangle',
+    'triangle',
+    'sphere',
+    'circle',
+    'ellipse',
+    'pentagon',
+    'hexagon',
+    'heptagon',
+    'octagon',
+    'nonagon',
+    'decagon',
+    'dodecagon',
+    'rhombus',
+    'parallelogram',
+    'trapezoid',
+    'kite',
+    'cube',
+    'cuboid',
+    'cylinder',
+    'cone',
+    'pyramid',
+    'tetrahedron',
+    'octahedron',
+    'dodecahedron',
+    'icosahedron',
+    'prism',
+    'torus',
+    'frustum',
+    'capsule',
+    'oval',
+    'star',
+    'heart',
+    'diamond',
+    'arrow',
+    'crescent',
+    'cross'
+}
+
+-- Helper function to shuffle a table
+local function shuffle(tbl)
+    for i = #tbl, 2, -1 do
+        local j = math.random(i)
+        tbl[i], tbl[j] = tbl[j], tbl[i]
+    end
+end
+
 function PositionalReasoning:new_world()
     local world = babi.World()
-    for _, shape in pairs{'square', 'rectangle', 'triangle', 'sphere'} do
-        for _, color in pairs{'red', 'blue', 'pink', 'yellow'} do
-            world:create_entity(color .. ' ' .. shape, {shape=shape,
-                                                        has_color=true,
-                                                        color=color})
+
+    -- Copy and shuffle colors and shapes
+    local selected_colors = {table.unpack(colors)}
+    local selected_shapes = {table.unpack(shapes)}
+    shuffle(selected_colors)
+    shuffle(selected_shapes)
+
+    -- Pick first 4 of each
+    for i = 1, 4 do
+        local shape = selected_shapes[i]
+        for j = 1, 4 do
+            local color = selected_colors[j]
+            world:create_entity(color .. ' ' .. shape, {
+                shape=shape,
+                has_color=true,
+                color=color
+            })
         end
         world:create_entity(shape, {shape=shape, has_color=false})
     end

@@ -9,55 +9,117 @@
 
 local tablex = require 'pl.tablex'
 local utilities = require 'babi.utilities'
+local World = require 'babi.World'
 
 BABI_HOME = os.getenv('BABI_HOME') or utilities.babi_home()
 
-local function generate(task_name, number, output, user_config)
+
+local task_to_world = {
+    [1]='world_basic/world_basic_',
+    [2]='world_basic/world_basic_',
+    [3]='world_basic/world_basic_',
+    [4]='world_basic/world_basic_',
+    [5]='world_basic/world_basic_',
+    [6]='world_basic/world_basic_',
+    [7]='world_basic/world_basic_',
+    [8]='world_basic/world_basic_',
+    [9]='world_basic/world_basic_',
+    [10]='world_basic/world_basic_',
+    [11]='world_basic/world_basic_',
+    [12]='world_basic/world_basic_',
+    [13]='world_basic/world_basic_',
+    [14]='world_basic/world_basic_',
+    [15]='world_basic/world_basic_',
+    [16]='world_basic/world_basic_',
+    [17]='world_basic/world_basic_',
+    [18]='world_basic/world_basic_',
+    [19]='world_basic/world_basic_',
+    [20]='world_motivations/world_motivations_'
+}
+
+
+function copy_world_table(orig)
+    local copy = {}
+    for i, v in ipairs(orig) do
+        copy[i] = v
+    end
+    return copy
+end
+
+
+local function generate(task_name, number, output, user_config, task_number)
     local task = require('babi.tasks.' .. task_name)
     local config = task.DEFAULT_CONFIG or {}
     config = tablex.merge(config, user_config, true)
 
+    local all_worlds = {}
+    for i = 1, 10 do
+        all_worlds[i] = World:load_lines((BABI_HOME or '') .. 'tasks/worlds/' .. task_to_world[task_number] .. i .. '.txt')
+    end
+
     math.randomseed(os.time())
+
+    local stories = {}
+
+    print(string.format("0 / %d", number))
     for i = 1, number do
         local story
         repeat
-            story = task:generate(config)
+            local world_index = math.random(1, 10)
+            local world_copy = copy_world_table(all_worlds[world_index])
+            -- print(string.format("Generating story %d using world: %s", i, task_to_world[task_number] .. world_index))
+            story = task:generate(config, world_copy)
         until story
-        output:write(story .. '\n')
+        table.insert(stories, story)
+
+        if i % 1000 == 0 then
+            print(string.format("%d / %d", i, number))
+        end
     end
+
+    -- Write everything at once to a file
+    local out_file_name = 'task_' .. task_number .. '.txt'
+    local file = io.open(out_file_name, "w")
+    if not file then
+        error("Failed to open output.txt for writing")
+    end
+
+    file:write(table.concat(stories, '\n\n\n'))
+    file:close()
 end
 
 
 assert(#arg > 0, 'Usage: generate.lua task [number] [output_file] [--option value ...]')
 
 local task_names = {
-    [1]='WhereIsActor',
-    [2]='WhereIsObject',
-    [3]='WhereWasObject',
-    [4]='IsDir',
-    [5]='WhoWhatGave',
-    [6]='IsActorThere',
-    [7]='Counting',
-    [8]='Listing',
-    [9]='Negation',
-    [10]='Indefinite',
-    [11]='BasicCoreference',
-    [12]='Conjunction',
-    [13]='CompoundCoreference',
-    [14]='Time',
-    [15]='Deduction',
-    [16]='Induction',
-    [17]='PositionalReasoning',
-    [18]='Size',
-    [19]='PathFinding',
-    [20]='Motivations'
+    [1]='WhereIsActor', --
+    [2]='WhereIsObject', --
+    [3]='WhereWasObject', --
+    [4]='IsDir', --
+    [5]='WhoWhatGave', --
+    [6]='IsActorThere', --
+    [7]='Counting', --
+    [8]='Listing', --
+    [9]='Negation', --
+    [10]='Indefinite', --
+    [11]='BasicCoreference', --
+    [12]='Conjunction', --
+    [13]='CompoundCoreference', --
+    [14]='Time', --
+    [15]='Deduction', --
+    [16]='Induction', --
+    [17]='PositionalReasoning', --
+    [18]='Size', --
+    [19]='PathFinding', --
+    [20]='Motivations' --
 }
 
 local generate_arg = {
     tonumber(arg[1]) and assert(task_names[tonumber(arg[1])]) or arg[1],
     1,
     io.stdout,
-    {}
+    {},
+    tonumber(arg[1]),
 }
 
 for i = 2, #arg do

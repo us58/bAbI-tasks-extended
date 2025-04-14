@@ -1,0 +1,82 @@
+# locations
+
+create cellar
+set cellar is_thing
+set cellar is_location
+
+create studio
+set studio is_thing
+set studio is_location
+
+create greenhouse
+set greenhouse is_thing
+set greenhouse is_location
+
+# small (moveable) objects
+
+create water_bottle
+set water_bottle is_thing
+set water_bottle is_gettable
+set water_bottle is_in cellar
+
+create skateboard
+set skateboard is_thing
+set skateboard is_gettable
+set skateboard is_in studio
+
+create hammock
+set hammock is_thing
+set hammock is_gettable
+set hammock is_in greenhouse
+
+create magnifying_glass
+set magnifying_glass is_thing
+set magnifying_glass is_gettable
+set magnifying_glass is_in studio
+
+# actors
+create Daniel
+set Daniel is_actor
+set Daniel is_god
+set Daniel is_male
+
+create Lily
+set Lily is_actor
+set Lily is_god
+set Lily is_female
+
+create Samuel
+set Samuel is_actor
+set Samuel is_god
+set Samuel is_male
+
+create Hannah
+set Hannah is_actor
+set Hannah is_god
+set Hannah is_female
+
+# motivations
+
+create parched
+set parched is_motivation
+set parched destination cellar
+set parched object water_bottle
+set parched is_adjective
+
+create restless
+set restless is_motivation
+set restless destination studio
+set restless object skateboard
+set restless is_adjective
+
+create exhausted
+set exhausted is_motivation
+set exhausted destination greenhouse
+set exhausted object hammock
+set exhausted is_adjective
+
+create inquisitive
+set inquisitive is_motivation
+set inquisitive destination studio
+set inquisitive object magnifying_glass
+set inquisitive is_adjective

@@ -1,0 +1,82 @@
+# locations
+
+create waiting_room
+set waiting_room is_thing
+set waiting_room is_location
+
+create conservatory
+set conservatory is_thing
+set conservatory is_location
+
+create driveway
+set driveway is_thing
+set driveway is_location
+
+# small (moveable) objects
+
+create tissue_box
+set tissue_box is_thing
+set tissue_box is_gettable
+set tissue_box is_in waiting_room
+
+create heater
+set heater is_thing
+set heater is_gettable
+set heater is_in conservatory
+
+create basketball
+set basketball is_thing
+set basketball is_gettable
+set basketball is_in driveway
+
+create cushion
+set cushion is_thing
+set cushion is_gettable
+set cushion is_in conservatory
+
+# actors
+create William
+set William is_actor
+set William is_god
+set William is_male
+
+create Grace
+set Grace is_actor
+set Grace is_god
+set Grace is_female
+
+create Michael
+set Michael is_actor
+set Michael is_god
+set Michael is_male
+
+create Zoe
+set Zoe is_actor
+set Zoe is_god
+set Zoe is_female
+
+# motivations
+
+create anxious
+set anxious is_motivation
+set anxious destination waiting_room
+set anxious object tissue_box
+set anxious is_adjective
+
+create cold
+set cold is_motivation
+set cold destination conservatory
+set cold object heater
+set cold is_adjective
+
+create energetic
+set energetic is_motivation
+set energetic destination driveway
+set energetic object basketball
+set energetic is_adjective
+
+create lazy
+set lazy is_motivation
+set lazy destination conservatory
+set lazy object cushion
+set lazy is_adjective

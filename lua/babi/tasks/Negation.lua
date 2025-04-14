@@ -13,9 +13,9 @@ local actions = require 'babi.actions'
 
 local Negation = torch.class('babi.Negation', 'babi.Task', babi)
 
-function Negation:new_world()
+function Negation:new_world(world_strings)
     local world = babi.World()
-    world:load((BABI_HOME or '') .. 'tasks/worlds/world_basic.txt')
+    world:load_from_strings(world_strings)
     return world
 end
 

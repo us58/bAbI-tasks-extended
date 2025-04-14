@@ -1,0 +1,170 @@
+# locations
+
+create bedroom
+set bedroom is_thing
+set bedroom is_location
+
+create kitchen
+set kitchen is_thing
+set kitchen is_location
+
+create garden
+set garden is_thing
+set garden is_location
+
+create hallway
+set hallway is_thing
+set hallway is_location
+
+create bathroom
+set bathroom is_thing
+set bathroom is_location
+
+create office
+set office is_thing
+set office is_location
+
+create living_room
+set living_room is_thing
+set living_room is_location
+
+create garage
+set garage is_thing
+set garage is_location
+
+# small (moveable) objects
+
+create toaster
+set toaster is_thing
+set toaster is_gettable
+set toaster is_in kitchen
+
+create pot_holder
+set pot_holder is_thing
+set pot_holder is_gettable
+set pot_holder is_in kitchen
+
+create fertilizer
+set fertilizer is_thing
+set fertilizer is_gettable
+set fertilizer is_in garden
+
+create bug_spray
+set bug_spray is_thing
+set bug_spray is_gettable
+set bug_spray is_in garden
+
+create diary
+set diary is_thing
+set diary is_gettable
+set diary is_in bedroom
+
+create reading_light
+set reading_light is_thing
+set reading_light is_gettable
+set reading_light is_in bedroom
+
+create umbrella_stand
+set umbrella_stand is_thing
+set umbrella_stand is_gettable
+set umbrella_stand is_in hallway
+
+create doormat
+set doormat is_thing
+set doormat is_gettable
+set doormat is_in hallway
+
+create bath_mat
+set bath_mat is_thing
+set bath_mat is_gettable
+set bath_mat is_in bathroom
+
+create scale
+set scale is_thing
+set scale is_gettable
+set scale is_in bathroom
+
+create sticky_notes
+set sticky_notes is_thing
+set sticky_notes is_gettable
+set sticky_notes is_in office
+
+create binder
+set binder is_thing
+set binder is_gettable
+set binder is_in office
+
+create chessboard
+set chessboard is_thing
+set chessboard is_gettable
+set chessboard is_in living_room
+
+create playing_cards
+set playing_cards is_thing
+set playing_cards is_gettable
+set playing_cards is_in living_room
+
+create saw
+set saw is_thing
+set saw is_gettable
+set saw is_in garage
+
+create level
+set level is_thing
+set level is_gettable
+set level is_in garage
+
+# objects
+
+create table
+set table is_thing
+set table is_in kitchen
+
+# actors
+create Oliver
+set Oliver is_actor
+set Oliver is_in kitchen
+set Oliver is_god
+set Oliver is_male
+
+create Patricia
+set Patricia is_actor
+set Patricia is_in bedroom
+set Patricia is_god
+set Patricia is_female
+
+create Roger
+set Roger is_actor
+set Roger is_in garden
+set Roger is_god
+set Roger is_male
+
+create Susan
+set Susan is_actor
+set Susan is_in hallway
+set Susan is_god
+set Susan is_female
+
+create Timothy
+set Timothy is_actor
+set Timothy is_in bathroom
+set Timothy is_god
+set Timothy is_male
+
+create Ursula
+set Ursula is_actor
+set Ursula is_in office
+set Ursula is_god
+set Ursula is_female
+
+create Victor
+set Victor is_actor
+set Victor is_in living_room
+set Victor is_god
+set Victor is_male
+
+create Wendy
+set Wendy is_actor
+set Wendy is_in garage
+set Wendy is_god
+set Wendy is_female

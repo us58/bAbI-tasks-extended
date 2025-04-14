@@ -12,9 +12,9 @@ local actions = require 'babi.actions'
 
 local BasicCoreference = torch.class('babi.BasicCoreference', 'babi.Task', babi)
 
-function BasicCoreference:new_world()
+function BasicCoreference:new_world(world_strings)
     local world = babi.World()
-    world:load((BABI_HOME or '') .. 'tasks/worlds/world_basic.txt')
+    world:load_from_strings(world_strings)
     return world
 end
 

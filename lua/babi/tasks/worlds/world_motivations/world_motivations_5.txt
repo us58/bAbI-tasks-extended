@@ -1,0 +1,82 @@
+# locations
+
+create pantry
+set pantry is_thing
+set pantry is_location
+
+create workshop
+set workshop is_thing
+set workshop is_location
+
+create closet
+set closet is_thing
+set closet is_location
+
+# small (moveable) objects
+
+create cereal
+set cereal is_thing
+set cereal is_gettable
+set cereal is_in pantry
+
+create screwdriver
+set screwdriver is_thing
+set screwdriver is_gettable
+set screwdriver is_in workshop
+
+create hanger
+set hanger is_thing
+set hanger is_gettable
+set hanger is_in closet
+
+create flashlight
+set flashlight is_thing
+set flashlight is_gettable
+set flashlight is_in workshop
+
+# actors
+create Mason
+set Mason is_actor
+set Mason is_god
+set Mason is_male
+
+create Harper
+set Harper is_actor
+set Harper is_god
+set Harper is_female
+
+create Elijah
+set Elijah is_actor
+set Elijah is_god
+set Elijah is_male
+
+create Ava
+set Ava is_actor
+set Ava is_god
+set Ava is_female
+
+# motivations
+
+create famished
+set famished is_motivation
+set famished destination pantry
+set famished object cereal
+set famished is_adjective
+
+create frustrated
+set frustrated is_motivation
+set frustrated destination workshop
+set frustrated object screwdriver
+set frustrated is_adjective
+
+create messy
+set messy is_motivation
+set messy destination closet
+set messy object hanger
+set messy is_adjective
+
+create uncertain
+set uncertain is_motivation
+set uncertain destination workshop
+set uncertain object flashlight
+set uncertain is_adjective

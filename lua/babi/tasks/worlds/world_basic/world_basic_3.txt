@@ -1,0 +1,170 @@
+# locations
+
+create bedroom
+set bedroom is_thing
+set bedroom is_location
+
+create kitchen
+set kitchen is_thing
+set kitchen is_location
+
+create garden
+set garden is_thing
+set garden is_location
+
+create hallway
+set hallway is_thing
+set hallway is_location
+
+create bathroom
+set bathroom is_thing
+set bathroom is_location
+
+create office
+set office is_thing
+set office is_location
+
+create living_room
+set living_room is_thing
+set living_room is_location
+
+create garage
+set garage is_thing
+set garage is_location
+
+# small (moveable) objects
+
+create sponge
+set sponge is_thing
+set sponge is_gettable
+set sponge is_in kitchen
+
+create bowl
+set bowl is_thing
+set bowl is_gettable
+set bowl is_in kitchen
+
+create seeds
+set seeds is_thing
+set seeds is_gettable
+set seeds is_in garden
+
+create hose
+set hose is_thing
+set hose is_gettable
+set hose is_in garden
+
+create blanket
+set blanket is_thing
+set blanket is_gettable
+set blanket is_in bedroom
+
+create pyjamas
+set pyjamas is_thing
+set pyjamas is_gettable
+set pyjamas is_in bedroom
+
+create scarf
+set scarf is_thing
+set scarf is_gettable
+set scarf is_in hallway
+
+create hat
+set hat is_thing
+set hat is_gettable
+set hat is_in hallway
+
+create shampoo
+set shampoo is_thing
+set shampoo is_gettable
+set shampoo is_in bathroom
+
+create comb
+set comb is_thing
+set comb is_gettable
+set comb is_in bathroom
+
+create highlighter
+set highlighter is_thing
+set highlighter is_gettable
+set highlighter is_in office
+
+create scissors
+set scissors is_thing
+set scissors is_gettable
+set scissors is_in office
+
+create cushion
+set cushion is_thing
+set cushion is_gettable
+set cushion is_in living_room
+
+create newspaper
+set newspaper is_thing
+set newspaper is_gettable
+set newspaper is_in living_room
+
+create nails
+set nails is_thing
+set nails is_gettable
+set nails is_in garage
+
+create pliers
+set pliers is_thing
+set pliers is_gettable
+set pliers is_in garage
+
+# objects
+
+create table
+set table is_thing
+set table is_in kitchen
+
+# actors
+create Ian
+set Ian is_actor
+set Ian is_in kitchen
+set Ian is_god
+set Ian is_male
+
+create Julia
+set Julia is_actor
+set Julia is_in bedroom
+set Julia is_god
+set Julia is_female
+
+create Kevin
+set Kevin is_actor
+set Kevin is_in garden
+set Kevin is_god
+set Kevin is_male
+
+create Linda
+set Linda is_actor
+set Linda is_in hallway
+set Linda is_god
+set Linda is_female
+
+create Mike
+set Mike is_actor
+set Mike is_in bathroom
+set Mike is_god
+set Mike is_male
+
+create Nancy
+set Nancy is_actor
+set Nancy is_in office
+set Nancy is_god
+set Nancy is_female
+
+create Oscar
+set Oscar is_actor
+set Oscar is_in living_room
+set Oscar is_god
+set Oscar is_male
+
+create Paula
+set Paula is_actor
+set Paula is_in garage
+set Paula is_god
+set Paula is_female

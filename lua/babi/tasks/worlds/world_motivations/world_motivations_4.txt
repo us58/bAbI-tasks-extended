@@ -1,0 +1,82 @@
+# locations
+
+create hallway
+set hallway is_thing
+set hallway is_location
+
+create laundry_room
+set laundry_room is_thing
+set laundry_room is_location
+
+create office
+set office is_thing
+set office is_location
+
+# small (moveable) objects
+
+create keys
+set keys is_thing
+set keys is_gettable
+set keys is_in hallway
+
+create detergent
+set detergent is_thing
+set detergent is_gettable
+set detergent is_in laundry_room
+
+create stapler
+set stapler is_thing
+set stapler is_gettable
+set stapler is_in office
+
+create shoes
+set shoes is_thing
+set shoes is_gettable
+set shoes is_in hallway
+
+# actors
+create Sophia
+set Sophia is_actor
+set Sophia is_god
+set Sophia is_female
+
+create James
+set James is_actor
+set James is_god
+set James is_male
+
+create Isabella
+set Isabella is_actor
+set Isabella is_god
+set Isabella is_female
+
+create Logan
+set Logan is_actor
+set Logan is_god
+set Logan is_male
+
+# motivations
+
+create late
+set late is_motivation
+set late destination hallway
+set late object keys
+set late is_adjective
+
+create dirty
+set dirty is_motivation
+set dirty destination laundry_room
+set dirty object detergent
+set dirty is_adjective
+
+create disorganized
+set disorganized is_motivation
+set disorganized destination office
+set disorganized object stapler
+set disorganized is_adjective
+
+create barefoot
+set barefoot is_motivation
+set barefoot destination hallway
+set barefoot object shoes
+set barefoot is_adjective

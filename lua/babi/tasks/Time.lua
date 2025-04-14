@@ -14,9 +14,9 @@ local utilities = require 'babi.utilities'
 
 local Time = torch.class('babi.Time', 'babi.Task', babi)
 
-function Time:new_world()
+function Time:new_world(world_strings)
     local world = babi.World()
-    world:load((BABI_HOME or '') .. 'tasks/worlds/world_basic.txt')
+    world:load_from_strings(world_strings)
     return world
 end
 

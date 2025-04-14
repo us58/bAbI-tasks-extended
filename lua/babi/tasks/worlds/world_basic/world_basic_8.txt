@@ -1,0 +1,170 @@
+# locations
+
+create bedroom
+set bedroom is_thing
+set bedroom is_location
+
+create kitchen
+set kitchen is_thing
+set kitchen is_location
+
+create garden
+set garden is_thing
+set garden is_location
+
+create hallway
+set hallway is_thing
+set hallway is_location
+
+create bathroom
+set bathroom is_thing
+set bathroom is_location
+
+create office
+set office is_thing
+set office is_location
+
+create living_room
+set living_room is_thing
+set living_room is_location
+
+create garage
+set garage is_thing
+set garage is_location
+
+# small (moveable) objects
+
+create napkin
+set napkin is_thing
+set napkin is_gettable
+set napkin is_in kitchen
+
+create mixer
+set mixer is_thing
+set mixer is_gettable
+set mixer is_in kitchen
+
+create bench
+set bench is_thing
+set bench is_gettable
+set bench is_in garden
+
+create statue
+set statue is_thing
+set statue is_gettable
+set statue is_in garden
+
+create earring
+set earring is_thing
+set earring is_gettable
+set earring is_in bedroom
+
+create hair_comb
+set hair_comb is_thing
+set hair_comb is_gettable
+set hair_comb is_in bedroom
+
+create winter_gloves
+set winter_gloves is_thing
+set winter_gloves is_gettable
+set winter_gloves is_in hallway
+
+create sunglasses
+set sunglasses is_thing
+set sunglasses is_gettable
+set sunglasses is_in hallway
+
+create shower_gel
+set shower_gel is_thing
+set shower_gel is_gettable
+set shower_gel is_in bathroom
+
+create hand_mirror
+set hand_mirror is_thing
+set hand_mirror is_gettable
+set hand_mirror is_in bathroom
+
+create calculator
+set calculator is_thing
+set calculator is_gettable
+set calculator is_in office
+
+create eraser
+set eraser is_thing
+set eraser is_gettable
+set eraser is_in office
+
+create remote_control
+set remote_control is_thing
+set remote_control is_gettable
+set remote_control is_in living_room
+
+create ashtray
+set ashtray is_thing
+set ashtray is_gettable
+set ashtray is_in living_room
+
+create screws
+set screws is_thing
+set screws is_gettable
+set screws is_in garage
+
+create bolt_cutters
+set bolt_cutters is_thing
+set bolt_cutters is_gettable
+set bolt_cutters is_in garage
+
+# objects
+
+create table
+set table is_thing
+set table is_in kitchen
+
+# actors
+create Yolanda
+set Yolanda is_actor
+set Yolanda is_in kitchen
+set Yolanda is_god
+set Yolanda is_female
+
+create Aaron
+set Aaron is_actor
+set Aaron is_in bedroom
+set Aaron is_god
+set Aaron is_male
+
+create Brenda
+set Brenda is_actor
+set Brenda is_in garden
+set Brenda is_god
+set Brenda is_female
+
+create Charles
+set Charles is_actor
+set Charles is_in hallway
+set Charles is_god
+set Charles is_male
+
+create Donna
+set Donna is_actor
+set Donna is_in bathroom
+set Donna is_god
+set Donna is_female
+
+create Edward
+set Edward is_actor
+set Edward is_in office
+set Edward is_god
+set Edward is_male
+
+create Gloria
+set Gloria is_actor
+set Gloria is_in living_room
+set Gloria is_god
+set Gloria is_female
+
+create Henry
+set Henry is_actor
+set Henry is_in garage
+set Henry is_god
+set Henry is_male

@@ -12,9 +12,9 @@ local actions = require 'babi.actions'
 
 local WhereIsObject = torch.class('babi.WhereIsObject', 'babi.Task', babi)
 
-function WhereIsObject:new_world()
+function WhereIsObject:new_world(world_strings)
     local world = babi.World()
-    world:load((BABI_HOME or '') .. 'tasks/worlds/world_basic.txt')
+    world:load_from_strings(world_strings)
     return world
 end
 

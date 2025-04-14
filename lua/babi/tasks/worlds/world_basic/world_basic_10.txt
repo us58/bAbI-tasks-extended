@@ -1,0 +1,170 @@
+# locations
+
+create bedroom
+set bedroom is_thing
+set bedroom is_location
+
+create kitchen
+set kitchen is_thing
+set kitchen is_location
+
+create garden
+set garden is_thing
+set garden is_location
+
+create hallway
+set hallway is_thing
+set hallway is_location
+
+create bathroom
+set bathroom is_thing
+set bathroom is_location
+
+create office
+set office is_thing
+set office is_location
+
+create living_room
+set living_room is_thing
+set living_room is_location
+
+create garage
+set garage is_thing
+set garage is_location
+
+# small (moveable) objects
+
+create spatula
+set spatula is_thing
+set spatula is_gettable
+set spatula is_in kitchen
+
+create timer
+set timer is_thing
+set timer is_gettable
+set timer is_in kitchen
+
+create wheelbarrow
+set wheelbarrow is_thing
+set wheelbarrow is_gettable
+set wheelbarrow is_in garden
+
+create bird_bath
+set bird_bath is_thing
+set bird_bath is_gettable
+set bird_bath is_in garden
+
+create teddy_bear
+set teddy_bear is_thing
+set teddy_bear is_gettable
+set teddy_bear is_in bedroom
+
+create picture_album
+set picture_album is_thing
+set picture_album is_gettable
+set picture_album is_in bedroom
+
+create coin_purse
+set coin_purse is_thing
+set coin_purse is_gettable
+set coin_purse is_in hallway
+
+create gloves_leather
+set gloves_leather is_thing
+set gloves_leather is_gettable
+set gloves_leather is_in hallway
+
+create washcloth
+set washcloth is_thing
+set washcloth is_gettable
+set washcloth is_in bathroom
+
+create tweezers
+set tweezers is_thing
+set tweezers is_gettable
+set tweezers is_in bathroom
+
+create marker_pen
+set marker_pen is_thing
+set marker_pen is_gettable
+set marker_pen is_in office
+
+create clipboard
+set clipboard is_thing
+set clipboard is_gettable
+set clipboard is_in office
+
+create dominoes
+set dominoes is_thing
+set dominoes is_gettable
+set dominoes is_in living_room
+
+create reading_glasses
+set reading_glasses is_thing
+set reading_glasses is_gettable
+set reading_glasses is_in living_room
+
+create rope
+set rope is_thing
+set rope is_gettable
+set rope is_in garage
+
+create chisel
+set chisel is_thing
+set chisel is_gettable
+set chisel is_in garage
+
+# objects
+
+create table
+set table is_thing
+set table is_in kitchen
+
+# actors
+create Simon
+set Simon is_actor
+set Simon is_in kitchen
+set Simon is_god
+set Simon is_male
+
+create Theresa
+set Theresa is_actor
+set Theresa is_in bedroom
+set Theresa is_god
+set Theresa is_female
+
+create Vincent
+set Vincent is_actor
+set Vincent is_in garden
+set Vincent is_god
+set Vincent is_male
+
+create Wilhelmina
+set Wilhelmina is_actor
+set Wilhelmina is_in hallway
+set Wilhelmina is_god
+set Wilhelmina is_female
+
+create Xavier
+set Xavier is_actor
+set Xavier is_in bathroom
+set Xavier is_god
+set Xavier is_male
+
+create Yvonne
+set Yvonne is_actor
+set Yvonne is_in office
+set Yvonne is_god
+set Yvonne is_female
+
+create Arnold
+set Arnold is_actor
+set Arnold is_in living_room
+set Arnold is_god
+set Arnold is_male
+
+create Barbara
+set Barbara is_actor
+set Barbara is_in garage
+set Barbara is_god
+set Barbara is_female

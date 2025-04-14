@@ -12,9 +12,9 @@ local actions = require 'babi.actions'
 
 local Motivations = torch.class('babi.Motivations', 'babi.Task', babi)
 
-function Motivations:new_world()
+function Motivations:new_world(world_strings)
     local world = babi.World()
-    world:load((BABI_HOME or '') .. 'tasks/worlds/world_motivations.txt')
+    world:load_from_strings(world_strings)
     -- Randomly assign motivations to people
     local actors = world:get_actors()
     local motivations =

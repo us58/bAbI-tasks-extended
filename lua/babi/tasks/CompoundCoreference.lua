@@ -14,9 +14,9 @@ local utilities = require 'babi.utilities'
 local CompoundCoreference =
     torch.class('babi.CompoundCoreference', 'babi.Task', babi)
 
-function CompoundCoreference:new_world()
+function CompoundCoreference:new_world(world_strings)
     local world = babi.World()
-    world:load((BABI_HOME or '') .. 'tasks/worlds/world_basic.txt')
+    world:load_from_strings(world_strings)
     return world
 end
 

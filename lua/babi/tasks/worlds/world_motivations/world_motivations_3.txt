@@ -1,0 +1,82 @@
+# locations
+
+create study
+set study is_thing
+set study is_location
+
+create dining_room
+set dining_room is_thing
+set dining_room is_location
+
+create balcony
+set balcony is_thing
+set balcony is_location
+
+# small (moveable) objects
+
+create pen
+set pen is_thing
+set pen is_gettable
+set pen is_in study
+
+create plate
+set plate is_thing
+set plate is_gettable
+set plate is_in dining_room
+
+create watering_can
+set watering_can is_thing
+set watering_can is_gettable
+set watering_can is_in balcony
+
+create glasses
+set glasses is_thing
+set glasses is_gettable
+set glasses is_in study
+
+# actors
+create Liam
+set Liam is_actor
+set Liam is_god
+set Liam is_male
+
+create Olivia
+set Olivia is_actor
+set Olivia is_god
+set Olivia is_female
+
+create Noah
+set Noah is_actor
+set Noah is_god
+set Noah is_male
+
+create Emma
+set Emma is_actor
+set Emma is_god
+set Emma is_female
+
+# motivations
+
+create forgetful
+set forgetful is_motivation
+set forgetful destination study
+set forgetful object pen
+set forgetful is_adjective
+
+create peckish
+set peckish is_motivation
+set peckish destination dining_room
+set peckish object plate
+set peckish is_adjective
+
+create worried
+set worried is_motivation
+set worried destination balcony
+set worried object watering_can
+set worried is_adjective
+
+create strained
+set strained is_motivation
+set strained destination study
+set strained object glasses
+set strained is_adjective

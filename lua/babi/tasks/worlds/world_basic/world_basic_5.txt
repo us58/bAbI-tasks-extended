@@ -1,0 +1,170 @@
+# locations
+
+create bedroom
+set bedroom is_thing
+set bedroom is_location
+
+create kitchen
+set kitchen is_thing
+set kitchen is_location
+
+create garden
+set garden is_thing
+set garden is_location
+
+create hallway
+set hallway is_thing
+set hallway is_location
+
+create bathroom
+set bathroom is_thing
+set bathroom is_location
+
+create office
+set office is_thing
+set office is_location
+
+create living_room
+set living_room is_thing
+set living_room is_location
+
+create garage
+set garage is_thing
+set garage is_location
+
+# small (moveable) objects
+
+create kettle
+set kettle is_thing
+set kettle is_gettable
+set kettle is_in kitchen
+
+create salt_shaker
+set salt_shaker is_thing
+set salt_shaker is_gettable
+set salt_shaker is_in kitchen
+
+create trowel
+set trowel is_thing
+set trowel is_gettable
+set trowel is_in garden
+
+create plant_pot
+set plant_pot is_thing
+set plant_pot is_gettable
+set plant_pot is_in garden
+
+create hairbrush
+set hairbrush is_thing
+set hairbrush is_gettable
+set hairbrush is_in bedroom
+
+create nightstand_lamp
+set nightstand_lamp is_thing
+set nightstand_lamp is_gettable
+set nightstand_lamp is_in bedroom
+
+create backpack
+set backpack is_thing
+set backpack is_gettable
+set backpack is_in hallway
+
+create wallet
+set wallet is_thing
+set wallet is_gettable
+set wallet is_in hallway
+
+create lotion
+set lotion is_thing
+set lotion is_gettable
+set lotion is_in bathroom
+
+create hairdryer
+set hairdryer is_thing
+set hairdryer is_gettable
+set hairdryer is_in bathroom
+
+create hole_punch
+set hole_punch is_thing
+set hole_punch is_gettable
+set hole_punch is_in office
+
+create envelope
+set envelope is_thing
+set envelope is_gettable
+set envelope is_in office
+
+create tv_guide
+set tv_guide is_thing
+set tv_guide is_gettable
+set tv_guide is_in living_room
+
+create glasses
+set glasses is_thing
+set glasses is_gettable
+set glasses is_in living_room
+
+create tape_measure
+set tape_measure is_thing
+set tape_measure is_gettable
+set tape_measure is_in garage
+
+create funnel
+set funnel is_thing
+set funnel is_gettable
+set funnel is_in garage
+
+# objects
+
+create table
+set table is_thing
+set table is_in kitchen
+
+# actors
+create Yasmin
+set Yasmin is_actor
+set Yasmin is_in kitchen
+set Yasmin is_god
+set Yasmin is_female
+
+create Zachary
+set Zachary is_actor
+set Zachary is_in bedroom
+set Zachary is_god
+set Zachary is_male
+
+create Adrian
+set Adrian is_actor
+set Adrian is_in garden
+set Adrian is_god
+set Adrian is_male
+
+create Beatrice
+set Beatrice is_actor
+set Beatrice is_in hallway
+set Beatrice is_god
+set Beatrice is_female
+
+create Colin
+set Colin is_actor
+set Colin is_in bathroom
+set Colin is_god
+set Colin is_male
+
+create Denise
+set Denise is_actor
+set Denise is_in office
+set Denise is_god
+set Denise is_female
+
+create Edgar
+set Edgar is_actor
+set Edgar is_in living_room
+set Edgar is_god
+set Edgar is_male
+
+create Flora
+set Flora is_actor
+set Flora is_in garage
+set Flora is_god
+set Flora is_female

@@ -1,0 +1,170 @@
+# locations
+
+create bedroom
+set bedroom is_thing
+set bedroom is_location
+
+create kitchen
+set kitchen is_thing
+set kitchen is_location
+
+create garden
+set garden is_thing
+set garden is_location
+
+create hallway
+set hallway is_thing
+set hallway is_location
+
+create bathroom
+set bathroom is_thing
+set bathroom is_location
+
+create office
+set office is_thing
+set office is_location
+
+create living_room
+set living_room is_thing
+set living_room is_location
+
+create garage
+set garage is_thing
+set garage is_location
+
+# small (moveable) objects
+
+create ladle
+set ladle is_thing
+set ladle is_gettable
+set ladle is_in kitchen
+
+create pepper_shaker
+set pepper_shaker is_thing
+set pepper_shaker is_gettable
+set pepper_shaker is_in kitchen
+
+create gnome
+set gnome is_thing
+set gnome is_gettable
+set gnome is_in garden
+
+create rake
+set rake is_thing
+set rake is_gettable
+set rake is_in garden
+
+create jewellery_box
+set jewellery_box is_thing
+set jewellery_box is_gettable
+set jewellery_box is_in bedroom
+
+create tissues
+set tissues is_thing
+set tissues is_gettable
+set tissues is_in bedroom
+
+create mail
+set mail is_thing
+set mail is_gettable
+set mail is_in hallway
+
+create keys
+set keys is_thing
+set keys is_gettable
+set keys is_in hallway
+
+create razor
+set razor is_thing
+set razor is_gettable
+set razor is_in bathroom
+
+create qtips
+set qtips is_thing
+set qtips is_gettable
+set qtips is_in bathroom
+
+create tape_dispenser
+set tape_dispenser is_thing
+set tape_dispenser is_gettable
+set tape_dispenser is_in office
+
+create paper_clips
+set paper_clips is_thing
+set paper_clips is_gettable
+set paper_clips is_in office
+
+create candle
+set candle is_thing
+set candle is_gettable
+set candle is_in living_room
+
+create coasters
+set coasters is_thing
+set coasters is_gettable
+set coasters is_in living_room
+
+create flashlight
+set flashlight is_thing
+set flashlight is_gettable
+set flashlight is_in garage
+
+create oil_can
+set oil_can is_thing
+set oil_can is_gettable
+set oil_can is_in garage
+
+# objects
+
+create table
+set table is_thing
+set table is_in kitchen
+
+# actors
+create Quentin
+set Quentin is_actor
+set Quentin is_in kitchen
+set Quentin is_god
+set Quentin is_male
+
+create Rachel
+set Rachel is_actor
+set Rachel is_in bedroom
+set Rachel is_god
+set Rachel is_female
+
+create Steve
+set Steve is_actor
+set Steve is_in garden
+set Steve is_god
+set Steve is_male
+
+create Tina
+set Tina is_actor
+set Tina is_in hallway
+set Tina is_god
+set Tina is_female
+
+create Umar
+set Umar is_actor
+set Umar is_in bathroom
+set Umar is_god
+set Umar is_male
+
+create Vera
+set Vera is_actor
+set Vera is_in office
+set Vera is_god
+set Vera is_female
+
+create Walter
+set Walter is_actor
+set Walter is_in living_room
+set Walter is_god
+set Walter is_male
+
+create Xena
+set Xena is_actor
+set Xena is_in garage
+set Xena is_god
+set Xena is_female

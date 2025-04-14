@@ -1,0 +1,170 @@
+# locations
+
+create bedroom
+set bedroom is_thing
+set bedroom is_location
+
+create kitchen
+set kitchen is_thing
+set kitchen is_location
+
+create garden
+set garden is_thing
+set garden is_location
+
+create hallway
+set hallway is_thing
+set hallway is_location
+
+create bathroom
+set bathroom is_thing
+set bathroom is_location
+
+create office
+set office is_thing
+set office is_location
+
+create living_room
+set living_room is_thing
+set living_room is_location
+
+create garage
+set garage is_thing
+set garage is_location
+
+# small (moveable) objects
+
+create whisk
+set whisk is_thing
+set whisk is_gettable
+set whisk is_in kitchen
+
+create cutting_board
+set cutting_board is_thing
+set cutting_board is_gettable
+set cutting_board is_in kitchen
+
+create bird_feeder
+set bird_feeder is_thing
+set bird_feeder is_gettable
+set bird_feeder is_in garden
+
+create shears
+set shears is_thing
+set shears is_gettable
+set shears is_in garden
+
+create sock
+set sock is_thing
+set sock is_gettable
+set sock is_in bedroom
+
+create watch
+set watch is_thing
+set watch is_gettable
+set watch is_in bedroom
+
+create boots
+set boots is_thing
+set boots is_gettable
+set boots is_in hallway
+
+create letter_opener
+set letter_opener is_thing
+set letter_opener is_gettable
+set letter_opener is_in hallway
+
+create sponge_bath
+set sponge_bath is_thing
+set sponge_bath is_gettable
+set sponge_bath is_in bathroom
+
+create nail_clippers
+set nail_clippers is_thing
+set nail_clippers is_gettable
+set nail_clippers is_in bathroom
+
+create rubber_band
+set rubber_band is_thing
+set rubber_band is_gettable
+set rubber_band is_in office
+
+create ruler
+set ruler is_thing
+set ruler is_gettable
+set ruler is_in office
+
+create photo_frame
+set photo_frame is_thing
+set photo_frame is_gettable
+set photo_frame is_in living_room
+
+create dvd
+set dvd is_thing
+set dvd is_gettable
+set dvd is_in living_room
+
+create paint_can
+set paint_can is_thing
+set paint_can is_gettable
+set paint_can is_in garage
+
+create wire
+set wire is_thing
+set wire is_gettable
+set wire is_in garage
+
+# objects
+
+create table
+set table is_thing
+set table is_in kitchen
+
+# actors
+create Gordon
+set Gordon is_actor
+set Gordon is_in kitchen
+set Gordon is_god
+set Gordon is_male
+
+create Harriet
+set Harriet is_actor
+set Harriet is_in bedroom
+set Harriet is_god
+set Harriet is_female
+
+create Ivan
+set Ivan is_actor
+set Ivan is_in garden
+set Ivan is_god
+set Ivan is_male
+
+create Judith
+set Judith is_actor
+set Judith is_in hallway
+set Judith is_god
+set Judith is_female
+
+create Karl
+set Karl is_actor
+set Karl is_in bathroom
+set Karl is_god
+set Karl is_male
+
+create Laura
+set Laura is_actor
+set Laura is_in office
+set Laura is_god
+set Laura is_female
+
+create Martin
+set Martin is_actor
+set Martin is_in living_room
+set Martin is_god
+set Martin is_male
+
+create Nora
+set Nora is_actor
+set Nora is_in garage
+set Nora is_god
+set Nora is_female

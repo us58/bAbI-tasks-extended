@@ -1,0 +1,170 @@
+# locations
+
+create bedroom
+set bedroom is_thing
+set bedroom is_location
+
+create kitchen
+set kitchen is_thing
+set kitchen is_location
+
+create garden
+set garden is_thing
+set garden is_location
+
+create hallway
+set hallway is_thing
+set hallway is_location
+
+create bathroom
+set bathroom is_thing
+set bathroom is_location
+
+create office
+set office is_thing
+set office is_location
+
+create living_room
+set living_room is_thing
+set living_room is_location
+
+create garage
+set garage is_thing
+set garage is_location
+
+# small (moveable) objects
+
+create grater
+set grater is_thing
+set grater is_gettable
+set grater is_in kitchen
+
+create apron
+set apron is_thing
+set apron is_gettable
+set apron is_in kitchen
+
+create sprinkler
+set sprinkler is_thing
+set sprinkler is_gettable
+set sprinkler is_in garden
+
+create pebbles
+set pebbles is_thing
+set pebbles is_gettable
+set pebbles is_in garden
+
+create necklace
+set necklace is_thing
+set necklace is_gettable
+set necklace is_in bedroom
+
+create sleep_mask
+set sleep_mask is_thing
+set sleep_mask is_gettable
+set sleep_mask is_in bedroom
+
+create keychain
+set keychain is_thing
+set keychain is_gettable
+set keychain is_in hallway
+
+create shopping_bag
+set shopping_bag is_thing
+set shopping_bag is_gettable
+set shopping_bag is_in hallway
+
+create floss
+set floss is_thing
+set floss is_gettable
+set floss is_in bathroom
+
+create face_wash
+set face_wash is_thing
+set face_wash is_gettable
+set face_wash is_in bathroom
+
+create pencil_sharpener
+set pencil_sharpener is_thing
+set pencil_sharpener is_gettable
+set pencil_sharpener is_in office
+
+create folder
+set folder is_thing
+set folder is_gettable
+set folder is_in office
+
+create lighter
+set lighter is_thing
+set lighter is_gettable
+set lighter is_in living_room
+
+create dice
+set dice is_thing
+set dice is_gettable
+set dice is_in living_room
+
+create clamps
+set clamps is_thing
+set clamps is_gettable
+set clamps is_in garage
+
+create work_gloves
+set work_gloves is_thing
+set work_gloves is_gettable
+set work_gloves is_in garage
+
+# objects
+
+create table
+set table is_thing
+set table is_in kitchen
+
+# actors
+create Isaac
+set Isaac is_actor
+set Isaac is_in kitchen
+set Isaac is_god
+set Isaac is_male
+
+create Josephine
+set Josephine is_actor
+set Josephine is_in bedroom
+set Josephine is_god
+set Josephine is_female
+
+create Kenneth
+set Kenneth is_actor
+set Kenneth is_in garden
+set Kenneth is_god
+set Kenneth is_male
+
+create Louise
+set Louise is_actor
+set Louise is_in hallway
+set Louise is_god
+set Louise is_female
+
+create Matthew
+set Matthew is_actor
+set Matthew is_in bathroom
+set Matthew is_god
+set Matthew is_male
+
+create Olivia
+set Olivia is_actor
+set Olivia is_in office
+set Olivia is_god
+set Olivia is_female
+
+create Peter
+set Peter is_actor
+set Peter is_in living_room
+set Peter is_god
+set Peter is_male
+
+create Rebecca
+set Rebecca is_actor
+set Rebecca is_in garage
+set Rebecca is_god
+set Rebecca is_female
