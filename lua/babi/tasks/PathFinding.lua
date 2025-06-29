@@ -110,8 +110,12 @@ function PathFinding:generate_story(world, knowledge, story, config)
             else
                 path:append(dir)
                 add_loc(grid, next_node, self.locations[i], world)
+                -- Corrected: swap subject and object
                 story:append(babi.Clause(world, true, world:god(), actions.set,
-                    self.locations[i - 1], dir, self.locations[i]))
+                    self.locations[i],    -- new location (subject)
+                    dir,
+                    self.locations[i - 1] -- old location (object)
+                ))
                 if i - 1 == path_length then
                     target = next_node
                     target_loc = self.locations[i]
@@ -137,13 +141,18 @@ function PathFinding:generate_story(world, knowledge, story, config)
                 grid:remove_node(decoy_node)
             else
                 add_loc(grid, decoy_node, self.locations[i + 1], world)
+                -- Corrected: swap subject and object for decoy facts
                 story:append(babi.Clause(world, true, world:god(), actions.set,
-                                    rel_obj, dir, self.locations[i + 1]))
+                    self.locations[i + 1], -- new location (subject)
+                    dir,
+                    rel_obj               -- old location (object)
+                ))
                 i = i + 1
                 j = j + 1
             end
         end
     end
+
     local support = Set(story:slice(1, path_length))
     story = utilities.choice(story, #story)
     story:append(babi.Question(
