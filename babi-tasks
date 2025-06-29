@@ -62,6 +62,18 @@ local function generate(task_name, number, output, user_config, task_number)
     local stories = {}
 
     print(string.format("0 / %d", number))
+
+    -- Prepare output file and clear any existing content
+    local out_file_name = 'task_' .. task_number .. '.txt'
+    do
+        local file = io.open(out_file_name, "w")
+        if not file then
+            error("Failed to open " .. out_file_name .. " for writing")
+        end
+        file:close()
+    end
+    local flush_done = false
+
     for i = 1, number do
         local story
         repeat
@@ -75,17 +87,36 @@ local function generate(task_name, number, output, user_config, task_number)
         if i % 1000 == 0 then
             print(string.format("%d / %d", i, number))
         end
+
+        -- Every 100,000 samples, append the current batch to disk
+        if i % 100000 == 0 then
+            local file = io.open(out_file_name, "a")
+            if not file then
+                error("Failed to open " .. out_file_name .. " for appending")
+            end
+            if flush_done then
+                file:write("\n\n\n")
+            end
+            file:write(table.concat(stories, "\n\n\n"))
+            file:close()
+
+            flush_done = true
+            stories = {}
+        end
     end
 
-    -- Write everything at once to a file
-    local out_file_name = 'task_' .. task_number .. '.txt'
-    local file = io.open(out_file_name, "w")
-    if not file then
-        error("Failed to open output.txt for writing")
+    -- Append any remaining stories to disk
+    if #stories > 0 then
+        local file = io.open(out_file_name, "a")
+        if not file then
+            error("Failed to open " .. out_file_name .. " for appending")
+        end
+        if flush_done then
+            file:write("\n\n\n")
+        end
+        file:write(table.concat(stories, "\n\n\n"))
+        file:close()
     end
-
-    file:write(table.concat(stories, '\n\n\n'))
-    file:close()
 end
 
 
